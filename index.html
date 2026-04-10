@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -226,75 +227,68 @@ select option { background: var(--surface); color: var(--text); }
 .empty-icon { font-size: 48px; margin-bottom: 10px; }
 .section-title { font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 10px; padding-left: 2px; }
 
-/* ログイン画面 */
 #login-screen {
-  display: none;
-  position: fixed; inset: 0; z-index: 9999;
-  background: var(--bg);
-  align-items: center; justify-content: center;
+display: none;
+position: fixed; inset: 0; z-index: 9999;
+background: var(–bg);
+align-items: center; justify-content: center;
 }
 #login-screen.show { display: flex; }
 .login-box {
-  width: 90%; max-width: 360px;
-  background: var(--surface2);
-  border: 1.5px solid var(--neon-cyan);
-  box-shadow: 0 0 40px #00F5FF22;
-  border-radius: 20px;
-  padding: 36px 28px 32px;
-  display: flex; flex-direction: column; gap: 16px;
+width: 90%; max-width: 360px;
+background: var(–surface2);
+border: 1.5px solid var(–neon-cyan);
+box-shadow: 0 0 40px #00F5FF22;
+border-radius: 20px;
+padding: 36px 28px 32px;
+display: flex; flex-direction: column; gap: 16px;
 }
 .login-title {
-  font-size: 22px; font-weight: 900;
-  color: var(--neon-cyan);
-  text-shadow: 0 0 14px #00F5FF88;
-  text-align: center; margin-bottom: 4px;
+font-size: 22px; font-weight: 900;
+color: var(–neon-cyan);
+text-shadow: 0 0 14px #00F5FF88;
+text-align: center; margin-bottom: 4px;
 }
-.login-sub {
-  font-size: 12px; color: var(--text-muted);
-  text-align: center; margin-top: -8px;
-}
+.login-sub { font-size: 12px; color: var(–text-muted); text-align: center; margin-top: -8px; }
 .login-field { display: flex; flex-direction: column; gap: 6px; }
-.login-field label { font-size: 11px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; }
+.login-field label { font-size: 11px; font-weight: 800; color: var(–text-muted); text-transform: uppercase; letter-spacing: 0.8px; }
 .login-field input {
-  padding: 12px 14px; font-size: 15px;
-  border: 1.5px solid var(--border); border-radius: 11px;
-  background: var(--surface); color: var(--text);
-  font-family: 'Nunito', sans-serif; font-weight: 700;
-  outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+padding: 12px 14px; font-size: 15px;
+border: 1.5px solid var(–border); border-radius: 11px;
+background: var(–surface); color: var(–text);
+font-family: ‘Nunito’, sans-serif; font-weight: 700;
+outline: none; transition: border-color 0.15s, box-shadow 0.15s;
 }
-.login-field input:focus { border-color: var(--neon-cyan); box-shadow: 0 0 0 3px #00F5FF22; }
+.login-field input:focus { border-color: var(–neon-cyan); box-shadow: 0 0 0 3px #00F5FF22; }
 .btn-login {
-  padding: 14px; font-size: 16px; font-weight: 900;
-  font-family: 'Nunito', sans-serif;
-  background: var(--neon-cyan); color: #0D1A1A;
-  border: none; border-radius: 12px;
-  box-shadow: 0 0 20px #00F5FF55, 0 4px 0 #008899;
-  cursor: pointer; margin-top: 4px;
-  transition: transform 0.1s, box-shadow 0.1s;
+padding: 14px; font-size: 16px; font-weight: 900;
+font-family: ‘Nunito’, sans-serif;
+background: var(–neon-cyan); color: #0D1A1A;
+border: none; border-radius: 12px;
+box-shadow: 0 0 20px #00F5FF55, 0 4px 0 #008899;
+cursor: pointer; margin-top: 4px;
+transition: transform 0.1s, box-shadow 0.1s;
 }
 .btn-login:active { transform: translateY(3px); box-shadow: 0 0 10px #00F5FF33, 0 1px 0 #008899; }
 .login-error {
-  font-size: 12px; font-weight: 800;
-  color: var(--neon-pink); text-align: center;
-  min-height: 18px;
-  text-shadow: 0 0 8px #FF2D9B66;
+font-size: 12px; font-weight: 800;
+color: var(–neon-pink); text-align: center;
+min-height: 18px; text-shadow: 0 0 8px #FF2D9B66;
 }
-
-/* ログアウトボタン */
 .btn-logout {
-  font-size: 11px; font-weight: 800;
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  color: var(--text-muted);
-  padding: 4px 12px; cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
+font-size: 11px; font-weight: 800;
+background: transparent;
+border: 1px solid var(–border);
+border-radius: 14px;
+color: var(–text-muted);
+padding: 4px 12px; cursor: pointer;
+transition: border-color 0.15s, color 0.15s;
 }
-.btn-logout:hover { border-color: var(--neon-pink); color: var(--neon-pink); }
+.btn-logout:hover { border-color: var(–neon-pink); color: var(–neon-pink); }
 </style>
+
 </head>
 <body>
-<!-- ログイン画面 -->
 <div id="login-screen" class="show">
   <div class="login-box">
     <div class="login-title">💸 経費管理アプリ</div>
@@ -308,7 +302,7 @@ select option { background: var(--surface); color: var(--text); }
       <input type="password" id="login-pass" placeholder="パスワードを入力" autocomplete="current-password">
     </div>
     <div class="login-error" id="login-error"></div>
-    <button class="btn-login" onclick="doLogin()">ログイン →</button>
+    <button class="btn-login" id="btn-login-submit">ログイン →</button>
   </div>
 </div>
 
@@ -322,16 +316,16 @@ select option { background: var(--surface); color: var(--text); }
       <div class="header-title">💸 経費管理アプリ</div>
       <div class="sync-dot" id="sync-dot" title="同期状態"></div>
     </div>
-    <button class="btn-logout" onclick="doLogout()">ログアウト</button>
+    <button class="btn-logout" id="btn-logout-btn">ログアウト</button>
   </div>
   <div class="tabs">
-    <button class="tab active" onclick="showTab('add',this)">
+    <button class="tab active" id="tab-btn-add">
       <span class="icon">✏️</span>追加<span class="tab-indicator"></span>
     </button>
-    <button class="tab" onclick="showTab('list',this)">
+    <button class="tab" id="tab-btn-list">
       <span class="icon">📋</span>一覧<span class="tab-indicator"></span>
     </button>
-    <button class="tab" onclick="showTab('summary',this)">
+    <button class="tab" id="tab-btn-summary">
       <span class="icon">📊</span>集計<span class="tab-indicator"></span>
     </button>
   </div>
@@ -339,28 +333,28 @@ select option { background: var(--surface); color: var(--text); }
   <div class="content" id="tab-add">
     <div class="section-title">科目を選ぶ</div>
     <div class="cat-grid" id="cat-grid">
-      <button class="cat-btn selected" data-cat="パーキング代" data-neon="#00F5FF" onclick="selectCat(this)">
+      <button class="cat-btn selected" data-cat="パーキング代" data-neon="#00F5FF">
         <span class="ci">🅿️</span>パーキング代<span class="check">✓</span>
       </button>
-      <button class="cat-btn" data-cat="接待・飲食費" data-neon="#FF2D9B" onclick="selectCat(this)">
+      <button class="cat-btn" data-cat="接待・飲食費" data-neon="#FF2D9B">
         <span class="ci">🍽️</span>飲食費<span class="check">✓</span>
       </button>
-      <button class="cat-btn" data-cat="消耗品・備品" data-neon="#FFE600" onclick="selectCat(this)">
+      <button class="cat-btn" data-cat="消耗品・備品" data-neon="#FFE600">
         <span class="ci">🖊️</span>消耗品<span class="check">✓</span>
       </button>
-      <button class="cat-btn" data-cat="通信費" data-neon="#BF5FFF" onclick="selectCat(this)">
+      <button class="cat-btn" data-cat="通信費" data-neon="#BF5FFF">
         <span class="ci">📱</span>通信費<span class="check">✓</span>
       </button>
-      <button class="cat-btn" data-cat="ガソリン代" data-neon="#FF6B00" onclick="selectCat(this)">
+      <button class="cat-btn" data-cat="ガソリン代" data-neon="#FF6B00">
         <span class="ci">⛽</span>ガソリン代<span class="check">✓</span>
       </button>
-      <button class="cat-btn" data-cat="光熱費" data-neon="#39FF14" onclick="selectCat(this)">
+      <button class="cat-btn" data-cat="光熱費" data-neon="#39FF14">
         <span class="ci">💡</span>光熱費<span class="check">✓</span>
       </button>
-      <button class="cat-btn" data-cat="車両保険" data-neon="#00F5FF" onclick="selectCat(this)">
+      <button class="cat-btn" data-cat="車両保険" data-neon="#00F5FF">
         <span class="ci">🛡️</span>車両保険<span class="check">✓</span>
       </button>
-      <button class="cat-btn" data-cat="売上" data-neon="#FFE600" onclick="selectCat(this)">
+      <button class="cat-btn" data-cat="売上" data-neon="#FFE600">
         <span class="ci">💰</span>売上<span class="check">✓</span>
       </button>
     </div>
@@ -382,29 +376,29 @@ select option { background: var(--surface); color: var(--text); }
       </div>
       <div class="field-group" style="margin-top:12px">
         <label class="field-label">支払方法</label>
-        <div class="pay-group">
-          <button class="pay-btn selected" onclick="selectPay(this)">現金</button>
-          <button class="pay-btn" onclick="selectPay(this)">クレジット</button>
-          <button class="pay-btn" onclick="selectPay(this)">振込</button>
-          <button class="pay-btn" onclick="selectPay(this)">その他</button>
+        <div class="pay-group" id="pay-group">
+          <button class="pay-btn selected">現金</button>
+          <button class="pay-btn">クレジット</button>
+          <button class="pay-btn">振込</button>
+          <button class="pay-btn">その他</button>
         </div>
       </div>
     </div>
-    <button class="btn-add" onclick="addEntry()">＋ 追加する</button>
+    <button class="btn-add" id="btn-add-entry">＋ 追加する</button>
   </div>
 
   <div class="content" id="tab-list" style="display:none">
     <div class="filter-bar">
-      <select id="filter-cat" onchange="renderList()">
+      <select id="filter-cat">
         <option value="">すべての科目</option>
         <option>パーキング代</option><option>接待・飲食費</option><option>消耗品・備品</option>
         <option>通信費</option><option>ガソリン代</option><option>光熱費</option>
         <option>車両保険</option><option>売上</option>
       </select>
-      <select id="filter-month" onchange="renderList()">
+      <select id="filter-month">
         <option value="">すべての月</option>
       </select>
-      <select id="filter-who" onchange="renderList()">
+      <select id="filter-who">
         <option value="">全員</option>
       </select>
     </div>
@@ -417,12 +411,15 @@ select option { background: var(--surface); color: var(--text); }
     <div class="card" id="member-breakdown"></div>
     <div class="section-title" style="margin-top:14px">科目別内訳</div>
     <div class="card"><div id="cat-breakdown"></div></div>
-    <button class="btn-excel" onclick="exportExcel()">📥 Excelをダウンロード（年間集計帳形式）</button>
+    <button class="btn-excel" id="btn-excel">📥 Excelをダウンロード（年間集計帳形式）</button>
   </div>
 </div>
 <div class="toast" id="toast"></div>
 
 <script>
+// =============================================
+// Firebase 設定
+// =============================================
 const firebaseConfig = {
   apiKey: "AIzaSyA9vnYBsAwOUdkIdNURCrnumT5uP39YE7c",
   authDomain: "keihi-personal-19064.firebaseapp.com",
@@ -437,52 +434,8 @@ const db = firebase.database();
 const auth = firebase.auth();
 
 // =============================================
-// ログイン・ログアウト処理
+// グローバル変数・定数
 // =============================================
-let appStarted = false;
-auth.onAuthStateChanged(user => {
-  if(user) {
-    document.getElementById('login-screen').classList.remove('show');
-    document.getElementById('main-app').style.display = 'block';
-    if(!appStarted) { appStarted = true; startApp(); }
-  } else {
-    document.getElementById('login-screen').classList.add('show');
-    document.getElementById('main-app').style.display = 'none';
-  }
-});
-
-function doLogin() {
-  const email = document.getElementById('login-email').value.trim();
-  const pass  = document.getElementById('login-pass').value;
-  const errEl = document.getElementById('login-error');
-  errEl.textContent = '';
-  if(!email || !pass) { errEl.textContent = 'メールアドレスとパスワードを入力してください'; return; }
-  auth.signInWithEmailAndPassword(email, pass)
-    .catch(err => {
-      console.error('login error:', err.code, err.message);
-      if(err.code === 'auth/invalid-credential' || err.code === 'auth/wrong-password' || err.code === 'auth/user-not-found') {
-        errEl.textContent = 'メールアドレスまたはパスワードが違います';
-      } else if(err.code === 'auth/operation-not-allowed') {
-        errEl.textContent = 'メール/パスワード認証が有効になっていません';
-      } else if(err.code === 'auth/network-request-failed') {
-        errEl.textContent = 'ネットワークエラーです。接続を確認してください';
-      } else {
-        errEl.textContent = 'エラー：' + err.code;
-      }
-    });
-}
-
-document.getElementById('login-pass').addEventListener('keydown', e => { if(e.key === 'Enter') doLogin(); });
-document.getElementById('login-email').addEventListener('keydown', e => { if(e.key === 'Enter') document.getElementById('login-pass').focus(); });
-
-function doLogout() {
-  if(!confirm('ログアウトしますか？')) return;
-  auth.signOut();
-}
-
-function startApp() {
-const entriesRef = db.ref('entries');
-
 const CAT_NEON = {
   'パーキング代':'#00F5FF','接待・飲食費':'#FF2D9B','消耗品・備品':'#FFE600',
   '通信費':'#BF5FFF','ガソリン代':'#FF6B00','光熱費':'#39FF14',
@@ -502,50 +455,54 @@ const MEMBER_NEON = ['#FF2D9B','#00F5FF','#FFE600','#39FF14','#BF5FFF','#FF6B00'
 let entries = {};
 let selCat = 'パーキング代';
 let selPay = '現金';
+let entriesRef = null;
 
-const savedName = localStorage.getItem('keihi_name') || '';
-document.getElementById('inp-name').value = savedName;
-document.getElementById('inp-name').addEventListener('input', e => localStorage.setItem('keihi_name', e.target.value));
-document.getElementById('inp-date').value = new Date().toISOString().split('T')[0];
-
-const syncDot = document.getElementById('sync-dot');
-entriesRef.on('value', snapshot => {
-  entries = snapshot.val() || {};
-  syncDot.className = 'sync-dot online';
-  if(document.getElementById('tab-list').style.display !== 'none') { buildFilters(); renderList(); }
-  if(document.getElementById('tab-summary').style.display !== 'none') renderSummary();
-}, () => { syncDot.className = 'sync-dot'; });
-db.ref('.info/connected').on('value', snap => {
-  syncDot.className = 'sync-dot ' + (snap.val() ? 'online' : '');
-});
-
+// =============================================
+// ユーティリティ
+// =============================================
 function toast(msg) {
   const el = document.getElementById('toast');
   el.textContent = msg; el.classList.add('show');
   setTimeout(() => el.classList.remove('show'), 2000);
 }
-function fmt(n) { return '¥'+Number(n).toLocaleString('ja-JP'); }
+function fmt(n) { return '¥' + Number(n).toLocaleString('ja-JP'); }
 
-function selectCat(btn) {
-  document.querySelectorAll('.cat-btn').forEach(b => {
-    b.classList.remove('selected');
-    b.style.borderColor = 'var(--border)';
-    b.style.boxShadow = 'none';
-    b.style.color = 'var(--text-muted)';
+// =============================================
+// ログイン・ログアウト
+// =============================================
+document.getElementById('btn-login-submit').addEventListener('click', doLogin);
+document.getElementById('login-pass').addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
+document.getElementById('login-email').addEventListener('keydown', e => { if(e.key==='Enter') document.getElementById('login-pass').focus(); });
+document.getElementById('btn-logout-btn').addEventListener('click', doLogout);
+
+function doLogin() {
+  const email = document.getElementById('login-email').value.trim();
+  const pass  = document.getElementById('login-pass').value;
+  const errEl = document.getElementById('login-error');
+  errEl.textContent = '';
+  if(!email || !pass) { errEl.textContent = 'メールアドレスとパスワードを入力してください'; return; }
+  auth.signInWithEmailAndPassword(email, pass).catch(err => {
+    if(err.code === 'auth/invalid-credential' || err.code === 'auth/wrong-password' || err.code === 'auth/user-not-found') {
+      errEl.textContent = 'メールアドレスまたはパスワードが違います';
+    } else if(err.code === 'auth/network-request-failed') {
+      errEl.textContent = 'ネットワークエラーです。接続を確認してください';
+    } else {
+      errEl.textContent = 'エラー：' + err.code;
+    }
   });
-  btn.classList.add('selected');
-  const neon = btn.dataset.neon;
-  btn.style.borderColor = neon;
-  btn.style.boxShadow = `0 0 14px ${neon}55`;
-  btn.style.color = neon;
-  selCat = btn.dataset.cat;
 }
 
-function selectPay(btn) {
-  document.querySelectorAll('.pay-btn').forEach(b => b.classList.remove('selected'));
-  btn.classList.add('selected');
-  selPay = btn.textContent;
+function doLogout() {
+  if(!confirm('ログアウトしますか？')) return;
+  auth.signOut();
 }
+
+// =============================================
+// タブ切り替え
+// =============================================
+document.getElementById('tab-btn-add').addEventListener('click', () => showTab('add', document.getElementById('tab-btn-add')));
+document.getElementById('tab-btn-list').addEventListener('click', () => showTab('list', document.getElementById('tab-btn-list')));
+document.getElementById('tab-btn-summary').addEventListener('click', () => showTab('summary', document.getElementById('tab-btn-summary')));
 
 function showTab(t, el) {
   ['add','list','summary'].forEach(id => {
@@ -560,6 +517,46 @@ function showTab(t, el) {
   if(t==='summary') renderSummary();
 }
 
+// =============================================
+// 科目ボタン・支払方法ボタン
+// =============================================
+document.getElementById('cat-grid').addEventListener('click', e => {
+  const btn = e.target.closest('.cat-btn');
+  if(!btn) return;
+  document.querySelectorAll('.cat-btn').forEach(b => {
+    b.classList.remove('selected');
+    b.style.borderColor = 'var(--border)';
+    b.style.boxShadow = 'none';
+    b.style.color = 'var(--text-muted)';
+  });
+  btn.classList.add('selected');
+  const neon = btn.dataset.neon;
+  btn.style.borderColor = neon;
+  btn.style.boxShadow = `0 0 14px ${neon}55`;
+  btn.style.color = neon;
+  selCat = btn.dataset.cat;
+});
+
+document.getElementById('pay-group').addEventListener('click', e => {
+  const btn = e.target.closest('.pay-btn');
+  if(!btn) return;
+  document.querySelectorAll('.pay-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  selPay = btn.textContent;
+});
+
+// =============================================
+// フィルター
+// =============================================
+document.getElementById('filter-cat').addEventListener('change', renderList);
+document.getElementById('filter-month').addEventListener('change', renderList);
+document.getElementById('filter-who').addEventListener('change', renderList);
+
+// =============================================
+// 追加ボタン
+// =============================================
+document.getElementById('btn-add-entry').addEventListener('click', addEntry);
+
 function addEntry() {
   const name = document.getElementById('inp-name').value.trim();
   const date = document.getElementById('inp-date').value;
@@ -568,6 +565,7 @@ function addEntry() {
   if(!name) { toast('👤 名前を入力してください'); return; }
   if(!date) { toast('📅 日付を入力してください'); return; }
   if(!amt||amt<=0) { toast('💴 金額を入力してください'); return; }
+  const syncDot = document.getElementById('sync-dot');
   syncDot.className = 'sync-dot syncing';
   const newRef = entriesRef.push();
   newRef.set({ id: newRef.key, date, cat: selCat, amt, pay: selPay, desc, name })
@@ -579,11 +577,26 @@ function addEntry() {
     .catch(() => toast('⚠️ 保存に失敗しました'));
 }
 
-function delEntry(id) {
+// =============================================
+// 削除
+// =============================================
+document.getElementById('list-container').addEventListener('click', e => {
+  const btn = e.target.closest('.del-btn');
+  if(!btn) return;
+  const id = btn.dataset.id;
+  if(!id) return;
   if(!confirm('この記録を削除しますか？')) return;
   entriesRef.child(id).remove().catch(() => toast('⚠️ 削除に失敗しました'));
-}
+});
 
+// =============================================
+// Excel出力
+// =============================================
+document.getElementById('btn-excel').addEventListener('click', exportExcel);
+
+// =============================================
+// フィルター構築・一覧描画
+// =============================================
 function buildFilters() {
   const list = Object.values(entries);
   const months = [...new Set(list.map(e => e.date.slice(0,7)))].sort().reverse();
@@ -639,11 +652,14 @@ function renderList() {
         <div class="item-who" style="background:${mc}22;border-color:${mc}66;color:${mc}">${e.name||'?'}</div>
         <div class="item-pay">${e.pay}</div>
       </div>
-      <button class="del-btn" onclick="delEntry('${e.id}')">🗑</button>
+      <button class="del-btn" data-id="${e.id}">🗑</button>
     </div>`;
   }).join('');
 }
 
+// =============================================
+// 集計画面
+// =============================================
 function renderSummary() {
   const list = Object.values(entries);
   const total = list.reduce((s,e) => s+e.amt, 0);
@@ -701,6 +717,9 @@ function renderSummary() {
     : '<div class="empty">データなし</div>';
 }
 
+// =============================================
+// Excel出力
+// =============================================
 function exportExcel() {
   const list = Object.values(entries);
   if(!list.length) { toast('データがありません'); return; }
@@ -758,15 +777,59 @@ function exportExcel() {
   toast('📥 Excelをダウンロードしました！');
 }
 
-document.querySelector('.tab.active .tab-indicator').style.display = 'block';
-const firstBtn = document.querySelector('.cat-btn.selected');
-if(firstBtn) {
-  const neon = firstBtn.dataset.neon;
-  firstBtn.style.borderColor = neon;
-  firstBtn.style.boxShadow = `0 0 14px ${neon}55`;
-  firstBtn.style.color = neon;
-}
-} // end startApp
+// =============================================
+// Firebase 認証状態の監視・アプリ起動
+// =============================================
+let appStarted = false;
+auth.onAuthStateChanged(user => {
+  if(user) {
+    document.getElementById('login-screen').classList.remove('show');
+    document.getElementById('main-app').style.display = 'block';
+    if(!appStarted) {
+      appStarted = true;
+
+      entriesRef = db.ref('entries');
+      const syncDot = document.getElementById('sync-dot');
+
+      // 名前の保存・復元
+      const savedName = localStorage.getItem('keihi_name') || '';
+      document.getElementById('inp-name').value = savedName;
+      document.getElementById('inp-name').addEventListener('input', e => localStorage.setItem('keihi_name', e.target.value));
+
+      // 今日の日付をセット
+      document.getElementById('inp-date').value = new Date().toISOString().split('T')[0];
+
+      // Firebase からデータを受信
+      entriesRef.on('value', snapshot => {
+        entries = snapshot.val() || {};
+        syncDot.className = 'sync-dot online';
+        if(document.getElementById('tab-list').style.display !== 'none') { buildFilters(); renderList(); }
+        if(document.getElementById('tab-summary').style.display !== 'none') renderSummary();
+      }, () => { syncDot.className = 'sync-dot'; });
+
+      db.ref('.info/connected').on('value', snap => {
+        syncDot.className = 'sync-dot ' + (snap.val() ? 'online' : '');
+      });
+
+      // 最初の科目ボタンをハイライト
+      const firstBtn = document.querySelector('.cat-btn.selected');
+      if(firstBtn) {
+        const neon = firstBtn.dataset.neon;
+        firstBtn.style.borderColor = neon;
+        firstBtn.style.boxShadow = `0 0 14px ${neon}55`;
+        firstBtn.style.color = neon;
+      }
+
+      // タブインジケーター初期化
+      const activeTab = document.querySelector('.tab.active');
+      if(activeTab) activeTab.querySelector('.tab-indicator').style.display = 'block';
+    }
+  } else {
+    document.getElementById('login-screen').classList.add('show');
+    document.getElementById('main-app').style.display = 'none';
+  }
+});
 </script>
+
 </body>
 </html>
