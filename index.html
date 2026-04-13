@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -227,66 +226,66 @@ select option { background: var(--surface); color: var(--text); }
 .empty-icon { font-size: 48px; margin-bottom: 10px; }
 .section-title { font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 10px; padding-left: 2px; }
 
+/* ログイン画面 */
 #login-screen {
-display: none;
-position: fixed; inset: 0; z-index: 9999;
-background: var(–bg);
-align-items: center; justify-content: center;
+  display: none;
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--bg);
+  align-items: center; justify-content: center;
 }
 #login-screen.show { display: flex; }
 .login-box {
-width: 90%; max-width: 360px;
-background: var(–surface2);
-border: 1.5px solid var(–neon-cyan);
-box-shadow: 0 0 40px #00F5FF22;
-border-radius: 20px;
-padding: 36px 28px 32px;
-display: flex; flex-direction: column; gap: 16px;
+  width: 90%; max-width: 360px;
+  background: var(--surface2);
+  border: 1.5px solid var(--neon-cyan);
+  box-shadow: 0 0 40px #00F5FF22;
+  border-radius: 20px;
+  padding: 36px 28px 32px;
+  display: flex; flex-direction: column; gap: 16px;
 }
 .login-title {
-font-size: 22px; font-weight: 900;
-color: var(–neon-cyan);
-text-shadow: 0 0 14px #00F5FF88;
-text-align: center; margin-bottom: 4px;
+  font-size: 22px; font-weight: 900;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 14px #00F5FF88;
+  text-align: center; margin-bottom: 4px;
 }
-.login-sub { font-size: 12px; color: var(–text-muted); text-align: center; margin-top: -8px; }
+.login-sub { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: -8px; }
 .login-field { display: flex; flex-direction: column; gap: 6px; }
-.login-field label { font-size: 11px; font-weight: 800; color: var(–text-muted); text-transform: uppercase; letter-spacing: 0.8px; }
+.login-field label { font-size: 11px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; }
 .login-field input {
-padding: 12px 14px; font-size: 15px;
-border: 1.5px solid var(–border); border-radius: 11px;
-background: var(–surface); color: var(–text);
-font-family: ‘Nunito’, sans-serif; font-weight: 700;
-outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+  padding: 12px 14px; font-size: 15px;
+  border: 1.5px solid var(--border); border-radius: 11px;
+  background: var(--surface); color: var(--text);
+  font-family: 'Nunito', sans-serif; font-weight: 700;
+  outline: none; transition: border-color 0.15s, box-shadow 0.15s;
 }
-.login-field input:focus { border-color: var(–neon-cyan); box-shadow: 0 0 0 3px #00F5FF22; }
+.login-field input:focus { border-color: var(--neon-cyan); box-shadow: 0 0 0 3px #00F5FF22; }
 .btn-login {
-padding: 14px; font-size: 16px; font-weight: 900;
-font-family: ‘Nunito’, sans-serif;
-background: var(–neon-cyan); color: #0D1A1A;
-border: none; border-radius: 12px;
-box-shadow: 0 0 20px #00F5FF55, 0 4px 0 #008899;
-cursor: pointer; margin-top: 4px;
-transition: transform 0.1s, box-shadow 0.1s;
+  padding: 14px; font-size: 16px; font-weight: 900;
+  font-family: 'Nunito', sans-serif;
+  background: var(--neon-cyan); color: #0D1A1A;
+  border: none; border-radius: 12px;
+  box-shadow: 0 0 20px #00F5FF55, 0 4px 0 #008899;
+  cursor: pointer; margin-top: 4px;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 .btn-login:active { transform: translateY(3px); box-shadow: 0 0 10px #00F5FF33, 0 1px 0 #008899; }
 .login-error {
-font-size: 12px; font-weight: 800;
-color: var(–neon-pink); text-align: center;
-min-height: 18px; text-shadow: 0 0 8px #FF2D9B66;
+  font-size: 12px; font-weight: 800;
+  color: var(--neon-pink); text-align: center;
+  min-height: 18px; text-shadow: 0 0 8px #FF2D9B66;
 }
 .btn-logout {
-font-size: 11px; font-weight: 800;
-background: transparent;
-border: 1px solid var(–border);
-border-radius: 14px;
-color: var(–text-muted);
-padding: 4px 12px; cursor: pointer;
-transition: border-color 0.15s, color 0.15s;
+  font-size: 11px; font-weight: 800;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text-muted);
+  padding: 4px 12px; cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
 }
-.btn-logout:hover { border-color: var(–neon-pink); color: var(–neon-pink); }
+.btn-logout:hover { border-color: var(--neon-pink); color: var(--neon-pink); }
 </style>
-
 </head>
 <body>
 <div id="login-screen" class="show">
@@ -417,9 +416,6 @@ transition: border-color 0.15s, color 0.15s;
 <div class="toast" id="toast"></div>
 
 <script>
-// =============================================
-// Firebase 設定
-// =============================================
 const firebaseConfig = {
   apiKey: "AIzaSyA9vnYBsAwOUdkIdNURCrnumT5uP39YE7c",
   authDomain: "keihi-personal-19064.firebaseapp.com",
@@ -433,9 +429,6 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 const auth = firebase.auth();
 
-// =============================================
-// グローバル変数・定数
-// =============================================
 const CAT_NEON = {
   'パーキング代':'#00F5FF','接待・飲食費':'#FF2D9B','消耗品・備品':'#FFE600',
   '通信費':'#BF5FFF','ガソリン代':'#FF6B00','光熱費':'#39FF14',
@@ -457,9 +450,6 @@ let selCat = 'パーキング代';
 let selPay = '現金';
 let entriesRef = null;
 
-// =============================================
-// ユーティリティ
-// =============================================
 function toast(msg) {
   const el = document.getElementById('toast');
   el.textContent = msg; el.classList.add('show');
@@ -467,9 +457,7 @@ function toast(msg) {
 }
 function fmt(n) { return '¥' + Number(n).toLocaleString('ja-JP'); }
 
-// =============================================
 // ログイン・ログアウト
-// =============================================
 document.getElementById('btn-login-submit').addEventListener('click', doLogin);
 document.getElementById('login-pass').addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
 document.getElementById('login-email').addEventListener('keydown', e => { if(e.key==='Enter') document.getElementById('login-pass').focus(); });
@@ -497,9 +485,7 @@ function doLogout() {
   auth.signOut();
 }
 
-// =============================================
 // タブ切り替え
-// =============================================
 document.getElementById('tab-btn-add').addEventListener('click', () => showTab('add', document.getElementById('tab-btn-add')));
 document.getElementById('tab-btn-list').addEventListener('click', () => showTab('list', document.getElementById('tab-btn-list')));
 document.getElementById('tab-btn-summary').addEventListener('click', () => showTab('summary', document.getElementById('tab-btn-summary')));
@@ -517,9 +503,7 @@ function showTab(t, el) {
   if(t==='summary') renderSummary();
 }
 
-// =============================================
-// 科目ボタン・支払方法ボタン
-// =============================================
+// 科目ボタン
 document.getElementById('cat-grid').addEventListener('click', e => {
   const btn = e.target.closest('.cat-btn');
   if(!btn) return;
@@ -537,6 +521,7 @@ document.getElementById('cat-grid').addEventListener('click', e => {
   selCat = btn.dataset.cat;
 });
 
+// 支払方法ボタン
 document.getElementById('pay-group').addEventListener('click', e => {
   const btn = e.target.closest('.pay-btn');
   if(!btn) return;
@@ -545,16 +530,12 @@ document.getElementById('pay-group').addEventListener('click', e => {
   selPay = btn.textContent;
 });
 
-// =============================================
 // フィルター
-// =============================================
 document.getElementById('filter-cat').addEventListener('change', renderList);
 document.getElementById('filter-month').addEventListener('change', renderList);
 document.getElementById('filter-who').addEventListener('change', renderList);
 
-// =============================================
 // 追加ボタン
-// =============================================
 document.getElementById('btn-add-entry').addEventListener('click', addEntry);
 
 function addEntry() {
@@ -577,9 +558,7 @@ function addEntry() {
     .catch(() => toast('⚠️ 保存に失敗しました'));
 }
 
-// =============================================
-// 削除
-// =============================================
+// 削除（イベント委任）
 document.getElementById('list-container').addEventListener('click', e => {
   const btn = e.target.closest('.del-btn');
   if(!btn) return;
@@ -589,14 +568,9 @@ document.getElementById('list-container').addEventListener('click', e => {
   entriesRef.child(id).remove().catch(() => toast('⚠️ 削除に失敗しました'));
 });
 
-// =============================================
 // Excel出力
-// =============================================
 document.getElementById('btn-excel').addEventListener('click', exportExcel);
 
-// =============================================
-// フィルター構築・一覧描画
-// =============================================
 function buildFilters() {
   const list = Object.values(entries);
   const months = [...new Set(list.map(e => e.date.slice(0,7)))].sort().reverse();
@@ -657,9 +631,6 @@ function renderList() {
   }).join('');
 }
 
-// =============================================
-// 集計画面
-// =============================================
 function renderSummary() {
   const list = Object.values(entries);
   const total = list.reduce((s,e) => s+e.amt, 0);
@@ -717,9 +688,6 @@ function renderSummary() {
     : '<div class="empty">データなし</div>';
 }
 
-// =============================================
-// Excel出力
-// =============================================
 function exportExcel() {
   const list = Object.values(entries);
   if(!list.length) { toast('データがありません'); return; }
@@ -777,9 +745,7 @@ function exportExcel() {
   toast('📥 Excelをダウンロードしました！');
 }
 
-// =============================================
-// Firebase 認証状態の監視・アプリ起動
-// =============================================
+// 認証状態の監視・アプリ起動
 let appStarted = false;
 auth.onAuthStateChanged(user => {
   if(user) {
@@ -787,31 +753,21 @@ auth.onAuthStateChanged(user => {
     document.getElementById('main-app').style.display = 'block';
     if(!appStarted) {
       appStarted = true;
-
       entriesRef = db.ref('entries');
       const syncDot = document.getElementById('sync-dot');
-
-      // 名前の保存・復元
       const savedName = localStorage.getItem('keihi_name') || '';
       document.getElementById('inp-name').value = savedName;
       document.getElementById('inp-name').addEventListener('input', e => localStorage.setItem('keihi_name', e.target.value));
-
-      // 今日の日付をセット
       document.getElementById('inp-date').value = new Date().toISOString().split('T')[0];
-
-      // Firebase からデータを受信
       entriesRef.on('value', snapshot => {
         entries = snapshot.val() || {};
         syncDot.className = 'sync-dot online';
         if(document.getElementById('tab-list').style.display !== 'none') { buildFilters(); renderList(); }
         if(document.getElementById('tab-summary').style.display !== 'none') renderSummary();
       }, () => { syncDot.className = 'sync-dot'; });
-
       db.ref('.info/connected').on('value', snap => {
         syncDot.className = 'sync-dot ' + (snap.val() ? 'online' : '');
       });
-
-      // 最初の科目ボタンをハイライト
       const firstBtn = document.querySelector('.cat-btn.selected');
       if(firstBtn) {
         const neon = firstBtn.dataset.neon;
@@ -819,8 +775,6 @@ auth.onAuthStateChanged(user => {
         firstBtn.style.boxShadow = `0 0 14px ${neon}55`;
         firstBtn.style.color = neon;
       }
-
-      // タブインジケーター初期化
       const activeTab = document.querySelector('.tab.active');
       if(activeTab) activeTab.querySelector('.tab-indicator').style.display = 'block';
     }
@@ -830,6 +784,5 @@ auth.onAuthStateChanged(user => {
   }
 });
 </script>
-
 </body>
 </html>
